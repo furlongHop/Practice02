@@ -22,24 +22,29 @@ public class Ex12 {
 		double division = num1/num2;
 		
 		
-		String p = "+";
-		String m = "-";
-		String mp = "*";
-		String d = "/";
+		switch(mark) {
+			case "+" : 
+				System.out.println("결과는: "+plus);
+				break;
+			case "-" : 
+				System.out.println("결과는: "+minus);
+				break;
+			case "*" : 
+				System.out.println("결과는: "+multiply);
+				break;
+			case "/" :
+				if(num2==0) {
+					System.out.println("계산할 수 없습니다.");
+				} else {
+					System.out.println("결과는: "+division);
+				}
+				break;
+			default :
+				System.out.println("계산할 수 없는 기호입니다.");
+				break;
+		}
 		
-		if(text.equals("mark")) {
-		   System.out.println("결과는: "+plus);
-	     }else if(mark==m) {
-			System.out.println("결과는: "+minus);
-	     }else if(mark==mp) {
-			System.out.println("결과는: "+multiply);
-	     }else if(mark==d) {
-	    	  if(num2==0) {
-			 	System.out.println("계산할 수 없습니다.");
-			}
-		     System.out.println("결과는: "+division);
-	     }
-	    
+
 		
 		sc.close();
 
